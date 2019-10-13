@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Todo Form</h1>
+<a href="/add">Add a Todo</a><br />
+<div th:each="todo : ${todos}">
+    <h4 th:inline="text">[[${todo title}]] @ [[${job.employer}]] </h4>
+    <p th:text="${todo.description}"></p>
+</div>
+</body>
+</html>
